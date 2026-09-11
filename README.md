@@ -60,6 +60,12 @@ Search, click, play. No more opening six different launchers to find one game.
 
 ---
 
+## ❕Important - Read before usage
+This is an Open Source Project, means you can, at anytime, look at every File yourself and determine if you want to use it.
+This Programm does nothing more than just looking for directories of Launchers, looking into the files and searching for the Games itself. (All Launchers and where it searches exactly are listed right above this)
+What it doesnt do: Change your Games, messes with your Savefiles, re-writing Directories or Files directly, getting you banned in online games
+If you stumble across any Errors or Bugs that i havent listed in "Current Issues / Future Plans", either open an Issue, or contact me on Discord - fiddlesticksz (Please note that im not very active on Discord)
+
 ## ⚠️ Current issues / Future Plans
 - Issues: App starts with the Main Language as German
 - Issues: First ever Scan after Startup doesnt scan properly sometimes
@@ -77,20 +83,20 @@ Search, click, play. No more opening six different launchers to find one game.
 ---
 
 # 🚀 How to Install 
-## Exe Standalone Install (Use this if you have Python installed)
+## 1. Exe Standalone Install (Use this if you have Python installed)
 1. Simply open a Terminal
 2. Make sure your Terminal is in the same directory where the files are located - cd "C:\Downloads\Mango Studio" - as example
 3. Type and run "pip install pyinstaller"
 4. Type and run "pyinstaller MangoStudio.spec"
 5. Wait for full install - the .exe will be placed in the "dist" Folder
 
-## Exe Standalone Install (Use this if you dont have python on your PC)
+## 2. Exe Standalone Install (Use this if you dont have python on your PC)
 1. Locate the Folder
 2. Run the .bat File
 3. The .bat will install all needed Files by itself
 4. Wait for full install - the .exe will be placed in the "dist" Folder
 
-## Proper Start (Run without Exe)
+## 3. Proper Start (Run without Exe)
 
 ```bash
 # 1) Install dependencies
