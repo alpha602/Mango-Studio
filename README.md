@@ -68,6 +68,7 @@ Search, click, play. No more opening six different launchers to find one game.
 - Future Plans: Fix all appearing Issues (obviously)
 - Future Plans: Add more Languages (French and Spanish is currently planned)
 - Future Plans: Make the UI/UX more appealing
+- Future Plans: Add option to Hide Standalone Games from manually added Directories in the Main Panel, but still being able to search for the Games
 - Future Plans: Make the Settings tab integrated instead of a Popup
 - Future Plans: Add more Settings Options
 - Future Plans: Add more Launcher Options
