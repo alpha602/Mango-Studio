@@ -66,7 +66,6 @@ Search, click, play. No more opening six different launchers to find one game.
 - What it doesnt do: Change your Games, messes with your Savefiles, re-writing Directories or Files directly, getting you banned in online games
 - If you stumble across any Errors or Bugs that i havent listed in "Current Issues / Future Plans", either open an Issue, or contact me on Discord - fiddlesticksz (Please note that im not very active on Discord)
 - The .bat or .exe might get flagged up on Start - thats because 1. I dont want to pay a yearly Price just so it doesnt get flagged, 2. Because the .exe contains a compressed Python interpreter
-- 
 
 ## ⚠️ Current issues / Future Plans
 - Issues: App starts with the Main Language as German
