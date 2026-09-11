@@ -68,7 +68,7 @@ Search, click, play. No more opening six different launchers to find one game.
 - Future Plans: Fix all appearing Issues (obviously)
 - Future Plans: Add more Languages (French and Spanish is currently planned)
 - Future Plans: Make the UI/UX more appealing
-- Future Plans: Make the Settingstab integrated instead of a Pop UP
+- Future Plans: Make the Settings tab integrated instead of a Popup
 - Future Plans: Add more Settings Options
 - Future Plans: Add more Launcher Options
 
@@ -92,7 +92,7 @@ Search, click, play. No more opening six different launchers to find one game.
 
 ```bash
 # 1) Install dependencies
-pip install -r requirements.txt
+pip install -r Requirements.txt
 
 # 2) (Optional, but technically not needed at all) Generate app icon
 python generate_icon.py
