@@ -7,6 +7,7 @@ regardless of which launcher they were installed through.
 Search, click, play. No more opening six different launchers to find one game.
 
 ---
+<img width="1919" height="1030" alt="Screenshot 2026-09-11 205726" src="https://github.com/user-attachments/assets/2abbbf86-d6dc-410b-bd05-19d80bbf9f35" />
 
 ## ✨ Features
 
