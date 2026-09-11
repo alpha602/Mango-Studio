@@ -1,0 +1,3 @@
+PySide6>=6.6.0
+
+# You only need to install this one dependency because it will automatically install all the other dependencies required for Mango Studio to run.
