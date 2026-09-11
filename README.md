@@ -61,9 +61,10 @@ Search, click, play. No more opening six different launchers to find one game.
 
 ## ⚠️ Current issues / Future Plans
 - Issues: App starts with the Main Language as German
-- Issues: Before the first mannual Scan-refresh, not all Games get always listed
+- Issues: First ever Scan after Startup doesnt scan properly sometimes
 - Issues: Formatting is slightly off when switching between "All" and seperate Launchers tab
 - Issues: Launcher Icons have a weird shadow inside of them
+---
 - Future Plans: Fix all appearing Issues (obviously)
 - Future Plans: Add more Languages (French and Spanish is currently planned)
 - Future Plans: Make the UI/UX more appealing
@@ -73,7 +74,7 @@ Search, click, play. No more opening six different launchers to find one game.
 
 ---
 
-# 🚀 Proper Install 
+# 🚀 How to Install 
 ## Exe Standalone Install (Use this if you have Python installed)
 1. Simply open a Terminal
 2. Make sure your Terminal is in the same directory where the files are located - cd "C:\Downloads\Mango Studio" - as example
