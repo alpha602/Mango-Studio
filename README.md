@@ -96,10 +96,7 @@ Search, click, play. No more opening six different launchers to find one game.
 # 1) Install dependencies
 pip install -r Requirements.txt
 
-# 2) (Optional, but technically not needed at all) Generate app icon
-python generate_icon.py
-
-# 3) Start the app (Can take a few Seconds on first start)
+# 2) Start the app (Can take a few Seconds on first start)
 python main.py
 
 # Optional: Force a full scan (or just use the built-in "Refresh" Button at the Top)
