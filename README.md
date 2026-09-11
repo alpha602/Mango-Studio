@@ -73,19 +73,32 @@ Search, click, play. No more opening six different launchers to find one game.
 
 ---
 
-## 🚀 Installation & Start (Development)
+# 🚀 Proper Install 
+## Exe Standalone Install (Use this if you have Python installed)
+1. Simply open a Terminal
+2. Make sure your Terminal is in the same directory where the files are located - cd "C:\Downloads\Mango Studio" - as example
+3. Type and run "pip install pyinstaller"
+4. Type and run "pyinstaller MangoStudio.spec"
+5. Wait for full install - the .exe will be placed in the "dist" Folder
+
+## Exe Standalone Install (Use this if you dont have python on your PC)
+1. Locate the Folder
+2. Run the .bat File
+3. The .bat will install all needed Files by itself
+4. Wait for full install - the .exe will be placed in the "dist" Folder
+
+## Proper Start (Run without Exe)
 
 ```bash
 # 1) Install dependencies
 pip install -r requirements.txt
 
-# 2) (Optional, one-time) Generate app icon
+# 2) (Optional, but technically not needed at all) Generate app icon
 python generate_icon.py
 
-# 3) Start the app
+# 3) Start the app (Can take a few Seconds on first start)
 python main.py
 
-# Optional: Force a full scan
+# Optional: Force a full scan (or just use the built-in "Refresh" Button at the Top)
 python main.py --rescan
-
 
