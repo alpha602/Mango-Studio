@@ -65,6 +65,8 @@ Search, click, play. No more opening six different launchers to find one game.
 - This Programm does nothing more than just looking for directories of Launchers, looking into the files and searching for the Games itself. (All Launchers and where it searches exactly are listed right above this)
 - What it doesnt do: Change your Games, messes with your Savefiles, re-writing Directories or Files directly, getting you banned in online games
 - If you stumble across any Errors or Bugs that i havent listed in "Current Issues / Future Plans", either open an Issue, or contact me on Discord - fiddlesticksz (Please note that im not very active on Discord)
+- The .bat or .exe might get flagged up on Start - thats because 1. I dont want to pay a yearly Price just so it doesnt get flagged, 2. Because the .exe contains a compressed Python interpreter
+- 
 
 ## ⚠️ Current issues / Future Plans
 - Issues: App starts with the Main Language as German
@@ -73,6 +75,7 @@ Search, click, play. No more opening six different launchers to find one game.
 - Issues: Launcher Icons have a weird shadow inside of them
 ---
 - Future Plans: Fix all appearing Issues (obviously)
+- Future Plans: Add compatibillity for Linux
 - Future Plans: Add more Languages (French and Spanish is currently planned)
 - Future Plans: Make the UI/UX more appealing
 - Future Plans: Add option to Hide Standalone Games from manually added Directories in the Main Panel, but still being able to search for the Games
