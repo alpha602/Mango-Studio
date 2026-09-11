@@ -61,10 +61,10 @@ Search, click, play. No more opening six different launchers to find one game.
 ---
 
 ## ❕Important - Read before usage
-This is an Open Source Project, means you can, at anytime, look at every File yourself and determine if you want to use it.
-This Programm does nothing more than just looking for directories of Launchers, looking into the files and searching for the Games itself. (All Launchers and where it searches exactly are listed right above this)
-What it doesnt do: Change your Games, messes with your Savefiles, re-writing Directories or Files directly, getting you banned in online games
-If you stumble across any Errors or Bugs that i havent listed in "Current Issues / Future Plans", either open an Issue, or contact me on Discord - fiddlesticksz (Please note that im not very active on Discord)
+- This is an Open Source Project, means you can, at anytime, look at every File yourself and determine if you want to use it.
+- This Programm does nothing more than just looking for directories of Launchers, looking into the files and searching for the Games itself. (All Launchers and where it searches exactly are listed right above this)
+- What it doesnt do: Change your Games, messes with your Savefiles, re-writing Directories or Files directly, getting you banned in online games
+- If you stumble across any Errors or Bugs that i havent listed in "Current Issues / Future Plans", either open an Issue, or contact me on Discord - fiddlesticksz (Please note that im not very active on Discord)
 
 ## ⚠️ Current issues / Future Plans
 - Issues: App starts with the Main Language as German
