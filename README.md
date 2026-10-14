@@ -1,4 +1,4 @@
-# 🥭 Mango Studio 1.0
+# 🥭 Mango Studio 1.0.0
 
 **Your central game hub for Windows.**
 
@@ -85,20 +85,20 @@ Search, click, play. No more opening six different launchers to find one game.
 ---
 
 # 🚀 How to Install 
-## 1. Exe Standalone Install (Use this if you have Python installed)
+## Exe Standalone Install (Use this if you have Python installed)
 1. Simply open a Terminal
 2. Make sure your Terminal is in the same directory where the files are located - cd "C:\Downloads\Mango Studio" - as example
 3. Type and run "pip install pyinstaller"
 4. Type and run "pyinstaller MangoStudio.spec"
 5. Wait for full install - the .exe will be placed in the "dist" Folder
 
-## 2. Exe Standalone Install (Use this if you dont have python on your PC)
+## Exe Standalone Install (Use this if you dont have python on your PC)
 1. Locate the Folder
 2. Run the .bat File
 3. The .bat will install all needed Files by itself
 4. Wait for full install - the .exe will be placed in the "dist" Folder
 
-## 3. Proper Start (Run without Exe)
+## Proper Start (Run without Exe)
 
 ```bash
 # 1) Install dependencies
