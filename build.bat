@@ -57,27 +57,51 @@ if defined PF86 (
 )
 if defined PYTHON_CMD goto python_ready
 
-
 REM --- STEP 2: INSTALL PYTHON AUTOMATICALLY ---
 echo.
-echo [Setup] Python was not found. Installing Python %PY_VERSION%...
+echo [Setup] Python was not found. Installing Python %PY_VERSION% automatically...
+echo [Setup] Internet connection is required.
+echo.
+
 where curl >nul 2>nul
 if %errorlevel%==0 (
+    echo [Download] Starting download with curl...
     curl -L --fail -o "%PY_INSTALLER%" "%PY_URL%"
+    if !errorlevel! neq 0 goto download_failed
 ) else (
+    echo [Download] Starting download with PowerShell...
     powershell -NoProfile -ExecutionPolicy Bypass -Command "[Net.ServicePointManager]::SecurityProtocol=[Net.SecurityProtocolType]::Tls12; Invoke-WebRequest -Uri '%PY_URL%' -OutFile '%PY_INSTALLER%'"
+    if !errorlevel! neq 0 goto download_failed
 )
 
+echo.
+echo [Install] Running installer... (Please confirm UAC prompt if necessary)
 start /wait "" "%PY_INSTALLER%" /quiet InstallAllUsers=0 PrependPath=1 Include_launcher=1 Include_test=0 Include_tcltk=1 Include_doc=0 Include_dev=0
+
 if errorlevel 1 goto install_failed
 
+echo [Install] Installation complete. Searching for newly installed Python...
+
+REM Re-search after installation
 set "PYTHON_CMD="
 for /d %%D in ("%LOCALAPPDATA%\Programs\Python\Python*") do (
     if exist "%%~D\python.exe" set "PYTHON_CMD=%%~D\python.exe"
 )
 if defined PYTHON_CMD goto python_ready
-goto install_failed
 
+where py >nul 2>nul
+if %errorlevel%==0 (
+    py -3 --version >nul 2>nul
+    if !errorlevel!==0 (
+        set "PYTHON_CMD=py -3"
+        goto python_ready
+    )
+)
+
+echo [Error] Python installation finished, but executable could not be located.
+echo         Please restart your computer or open a new terminal window and try again.
+pause
+exit /b 1
 
 :python_ready
 echo [Success] Found Python: %PYTHON_CMD%
@@ -87,7 +111,7 @@ echo.
 REM --- STEP 3: SETUP VIRTUAL ENVIRONMENT ---
 echo [Step 3] Setting up isolated virtual environment (.venv)...
 
-REM Alte .venv löschen, falls DLL-Konflikte aus vorherigen Builds bestehen
+REM Delete old .venv to prevent DLL conflicts from previous builds
 if exist ".venv" (
     echo         Removing old .venv to ensure clean DLLs...
     rmdir /s /q ".venv"
@@ -102,34 +126,39 @@ if errorlevel 1 (
 
 call ".venv\Scripts\activate.bat"
 
-REM WICHTIG: Verhindert, dass PyInstaller globale Site-Packages durchsucht (Fix für Ordinal 380)
+REM IMPORTANT: Prevents PyInstaller from searching global site-packages (Fix for Ordinal 380)
 set "PYTHONNOUSERSITE=1"
 
 echo [Success] Virtual environment activated.
 echo.
 
 REM --- STEP 4: INSTALL DEPENDENCIES ---
-echo [Step 4] Installing dependencies (PySide6, Pillow, PyInstaller)...
+echo [Step 4] Installing dependencies (PySide6, Pillow, psutil, PyInstaller)...
+echo         (This may take a few minutes on the first run)
+
 python -m pip install --upgrade pip >nul 2>nul
-pip install -r requirements.txt
+
+pip install -r Requirements.txt
 if errorlevel 1 (
-    echo [Error] Failed to install dependencies.
+    echo [Error] Failed to install dependencies from Requirements.txt.
     pause
     exit /b 1
 )
+
 pip install pyinstaller
 if errorlevel 1 (
     echo [Error] Failed to install PyInstaller.
     pause
     exit /b 1
 )
+
 echo [Success] All dependencies installed.
 echo.
 
 REM --- STEP 5: CLEAN & BUILD THE EXE ---
 echo [Step 5] Cleaning old builds and building MangoStudio.exe...
 
-REM Alte Build-Artefakte löschen, um DLL-Leichen zu entfernen
+REM Delete old build artifacts to remove leftover DLLs
 if exist "build" rmdir /s /q "build"
 if exist "dist" rmdir /s /q "dist"
 if exist "MangoStudio.spec.bak" del "MangoStudio.spec.bak"
@@ -138,7 +167,7 @@ pyinstaller MangoStudio.spec --noconfirm
 
 if errorlevel 1 (
     echo.
-    echo [Error] PyInstaller build failed! Check the output above.
+    echo [Error] PyInstaller build failed! Check the output above for details.
     pause
     exit /b 1
 )
@@ -151,10 +180,19 @@ echo.
 echo Your executable is ready at:
 echo   %CD%\dist\MangoStudio\MangoStudio.exe
 echo.
+echo You can share the entire 'dist\MangoStudio' folder with others.
+echo.
 pause
 exit /b 0
 
+:download_failed
+echo.
+echo [Error] Download failed. Please check your internet connection.
+pause
+exit /b 1
+
 :install_failed
-echo [Error] Python installation failed.
+echo.
+echo [Error] Python installation failed or was cancelled by the user.
 pause
 exit /b 1
