@@ -1,1 +1,0 @@
-"""Mango Studio – Data-Package (Modelle, Datenbank)."""
