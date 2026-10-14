@@ -1,1 +1,0 @@
-"""Mango Studio – Core-Package (Konfiguration, Scanner, Launcher-Logik)."""
