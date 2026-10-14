@@ -1,4 +1,4 @@
-# 🥭 Mango Studio 1.0.0
+# 🥭 Mango Studio 2.0.0
 
 **Your central game hub for Windows.**
 
@@ -69,17 +69,13 @@ Search, click, play. No more opening six different launchers to find one game.
 
 ## ⚠️ Current issues / Future Plans
 - Issues: App starts with the Main Language as German
-- Issues: First ever Scan after Startup doesnt scan properly sometimes
-- Issues: Formatting is slightly off when switching between "All" and seperate Launchers tab
-- Issues: Launcher Icons have a weird shadow inside of them
+- Issues: First ever Scan after Startup can take a while, espacially with Games on a HDD
 ---
 - Future Plans: Fix all appearing Issues (obviously)
 - Future Plans: Add compatibillity for Linux
 - Future Plans: Add more Languages (French and Spanish is currently planned)
-- Future Plans: Make the UI/UX more appealing
 - Future Plans: Add option to Hide Standalone Games from manually added Directories in the Main Panel, but still being able to search for the Games
 - Future Plans: Make the Settings tab integrated instead of a Popup
-- Future Plans: Add more Settings Options
 - Future Plans: Add more Launcher Options
 
 ---
