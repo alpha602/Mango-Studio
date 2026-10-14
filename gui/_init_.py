@@ -1,1 +1,0 @@
-"""Mango Studio – GUI-Package (Fenster, Kacheln, Widgets)."""
