@@ -1,4 +1,5 @@
-# 🥭 Mango Studio 2.0.0
+# 🥭 Mango Studio 2.0.0 
+<img width="56" height="56" alt="mango" src="https://github.com/user-attachments/assets/2e585821-4e02-4917-a991-83cccdf85ea1" />
 
 **Your central game hub for Windows.**
 
@@ -7,7 +8,7 @@ regardless of which launcher they were installed through.
 Search, click, play. No more opening six different launchers to find one game.
 
 ---
-<img width="1919" height="1030" alt="Screenshot 2026-09-11 205726" src="https://github.com/user-attachments/assets/2abbbf86-d6dc-410b-bd05-19d80bbf9f35" />
+<img width="1351" height="822" alt="image" src="https://github.com/user-attachments/assets/e6095a6e-5c7d-443d-a929-f81dfe17e759" />
 
 ## ✨ Features
 
